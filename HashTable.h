@@ -8,8 +8,11 @@ template <typename T>
 class HashTable{
 	private:
 		int hashFunction(std::string k);
-		std::vector<Entity<T> >* table[1001];
+		std::vector<std::vector<Entity<T>* > > table;
 	public:
 		HashTable();
+		void insert(std::string,T v);
+		T lookUp(std::string);
+		void remove(std::string);
 };
 #endif
