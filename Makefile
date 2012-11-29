@@ -2,7 +2,7 @@ CPP = g++
 CFLAGS = -Wall -Wextra -Werror
 
 all: hash_test.cpp Entity.o HashTable.o
-	$(CPP) $(CFLAGS) -o hash_test hash_test.cpp
+	$(CPP) $(CFLAGS) -o hash_test hash_test.cpp Entity.o HashTable.o
 
 Entity.o: Entity.cpp Entity.h
 	$(CPP) $(CLFAGS) -c Entity.cpp

@@ -40,7 +40,9 @@ T HashTable<T>::lookUp(std::string k){
 			return table[loc][i]->getValue();
 		}
 	}
-	std::cout << "Key does not exist" << std::endl;
+	std::cout << "Key '" << k << "' does not exist" << std::endl;
+	
+	//returns 0 if key doesn't exist
 	return 0;
 }
 
@@ -54,7 +56,7 @@ void HashTable<T>::remove(std::string k){
 			return;
 		}
 	}
-	std::cout << "Element does not exist" << std::endl;
+	std::cout << "Key '" << k << "' does not exist" << std::endl;
 }
 
 template class HashTable<int>;
