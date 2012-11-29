@@ -31,6 +31,32 @@ void HashTable<T>::insert(std::string k, T v){
 	table[loc].push_back(ent);
 }
 
+template <typename T>
+T HashTable<T>::lookUp(std::string k){
+	int loc = hashFunction(k);
+
+	for(int i = 0; i < (int)table[loc].size(); i++){
+		if(table[loc][i]->getKey() == k){
+			return table[loc][i]->getValue();
+		}
+	}
+	std::cout << "Key does not exist" << std::endl;
+	return 0;
+}
+
+template <typename T>
+void HashTable<T>::remove(std::string k){
+
+	int loc = hashFunction(k);
+	for(int i = 0; i < (int)table[loc].size(); i++){
+		if(table[loc][i]->getKey() == k){
+			table[loc].erase(table[loc].begin()+i);
+			return;
+		}
+	}
+	std::cout << "Element does not exist" << std::endl;
+}
+
 template class HashTable<int>;
 template class HashTable<std::string>;
 template class HashTable<double>;
