@@ -1,8 +1,8 @@
 CPP = g++
 CFLAGS = -Wall -Wextra -Werror
 
-all: has_test.cpp Entity.o HashTable.o
-	$(CPP) $(CFLAGS) -o hash_test
+all: hash_test.cpp Entity.o HashTable.o
+	$(CPP) $(CFLAGS) -o hash_test hash_test.cpp
 
 Entity.o: Entity.cpp Entity.h
 	$(CPP) $(CLFAGS) -c Entity.cpp
