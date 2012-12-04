@@ -9,6 +9,13 @@ HashTable<T>::HashTable(){
 }
 
 template <typename T>
+HashTable<T>::~HashTable(){
+	for(int i = 0; i < 1009; i++){
+		table[i].clear();
+	}
+}
+
+template <typename T>
 int HashTable<T>::hashFunction(std::string k){
 	int sum = 0;
 	for(int i = 0; i < (int)k.size(); i++){

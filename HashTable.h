@@ -11,6 +11,7 @@ class HashTable{
 		std::vector<std::vector<Entity<T>* > > table;
 	public:
 		HashTable<T>();
+		~HashTable<T>();
 		void insert(std::string,T v);
 		T lookUp(std::string);
 		void remove(std::string);
