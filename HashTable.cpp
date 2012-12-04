@@ -3,11 +3,7 @@
 template <typename T>
 HashTable<T>::HashTable(){
 	std::vector<Entity<T>* > blankEntry;
-<<<<<<< HEAD
 	for(int i = 0; i < 1009; i++){
-=======
-	for(int i = 0; i < 1001; i++){
->>>>>>> c3b62f2332b29f9995f7e93bc46f8fca25961346
 		table.push_back(blankEntry);
 	}
 }
